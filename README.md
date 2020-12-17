@@ -22,7 +22,7 @@ Both the scripts take all the txt files from the data folder as an input and gen
 For live code demo click on the Google Colab link.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NAC8tND-g8TLu4HlsUyTfOASq3WMZjhM?usp=sharing) 
-[![Open In Colab](https://colab.research.google.com/drive/15-dsYKo0V5o3UiB6x9ukUmqnRBWaW00j?usp=sharing) 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/15-dsYKo0V5o3UiB6x9ukUmqnRBWaW00j?usp=sharing) 
 
 The diagrams below show the progression of the Genetic Algorithm. 
 
