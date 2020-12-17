@@ -14,7 +14,7 @@ import time
 with open("output_sls.csv", "a") as f:
     f.writelines("81688982, 40204942, 32329404\nSLS\nTSP\n")
 
-base_dir = "/Users/ratulghoshr/Desktop/AI project.nosync/cs271p/fall20-benchmark-tsp-problems"
+base_dir = "/data"
 file_list = os.listdir(base_dir)
 
 def cmp(c):
