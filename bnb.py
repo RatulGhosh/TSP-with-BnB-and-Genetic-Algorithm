@@ -155,7 +155,7 @@ def TSP(adj):
 with open("output_bnb.csv", "a") as f:
     f.writelines("81688982, 40204942, 32329404\nBnB\nTSP\n")
 
-base_dir = "C:/Users/Aditya/Downloads/271_AI_Project-main/Data"
+base_dir = "/data"
 file_list = os.listdir(base_dir)
 def cmp(c):
     return (int(c.split('-')[2])/1000)+(int(c.split('-')[3])/10000000)+(int(c.split('-')[4])/100)+(int(c.split('-')[5])/25)
