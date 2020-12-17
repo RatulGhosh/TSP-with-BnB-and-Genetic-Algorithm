@@ -15,7 +15,7 @@ For live code demo use the below link:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NAC8tND-g8TLu4HlsUyTfOASq3WMZjhM?usp=sharing) 
 
-The diagrams below show the progressing of the Genetic Algorithm. 
+The diagrams below show the progression of the Genetic Algorithm. 
 
 ![Alt Text](https://raw.githubusercontent.com/RatulGhosh/ratulghosh.github.io/master/images/ezgif-6-4667bf959372.gif)
 
