@@ -49,11 +49,14 @@ def secondMin(adj, i):
 # curr_path[] -> where the solution is being stored 
 # which would later be copied to final_path[] 
 def TSPRec(adj, curr_bound, curr_weight,  
-              level, curr_path, visited): 
+              level, curr_path, visited, start): 
     global final_res 
  
     # base case is when we have reached level N  
     # which means we have covered all the nodes once 
+    time_now = time.time()
+    if time_now - start > 1050:
+        return
     if level == N: 
           
         # check if there is an edge from 
@@ -105,7 +108,7 @@ def TSPRec(adj, curr_bound, curr_weight,
                   
                 # call TSPRec for the next level 
                 TSPRec(adj, curr_bound, curr_weight,  
-                       level + 1, curr_path, visited) 
+                       level + 1, curr_path, visited,start) 
   
             # Else we have to prune the node by resetting  
             # all changes to curr_weight and curr_bound 
@@ -125,6 +128,7 @@ def TSP(adj):
     # using the formula 1/2 * (sum of first min +  
     # second min) for all edges. Also initialize the  
     # curr_path and visited array 
+    start = time.time()
     curr_bound = 0
     curr_path = [-1] * (N + 1) 
     visited = [False] * N 
@@ -144,14 +148,14 @@ def TSP(adj):
   
     # Call to TSPRec for curr_weight  
     # equal to 0 and level 1 
-    TSPRec(adj, curr_bound, 0, 1, curr_path, visited) 
+    TSPRec(adj, curr_bound, 0, 1, curr_path, visited,start) 
 
 
 
 with open("output_bnb.csv", "a") as f:
     f.writelines("81688982, 40204942, 32329404\nBnB\nTSP\n")
 
-base_dir = "/Users/ratulghoshr/Desktop/AI project.nosync/data"
+base_dir = "C:/Users/Aditya/Downloads/271_AI_Project-main/Data"
 file_list = os.listdir(base_dir)
 def cmp(c):
     return (int(c.split('-')[2])/1000)+(int(c.split('-')[3])/10000000)+(int(c.split('-')[4])/100)+(int(c.split('-')[5])/25)
@@ -188,6 +192,6 @@ for file_name in file_list:
     time_taken = time.time()-start_time
 
     with open("output_bnb.csv", "a") as f:
-        f.writelines(str(round(time_taken, 2))+","+str(round(final_res, 2))+","+str(call_num)+"\n")
+        f.writelines(file_name + ","+str(round(final_res, 8))+"\n")
 
          
