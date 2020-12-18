@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ############# IMPORTANT #################
      Edit variable value for `base_dir` in both 'bnb.py' and 'TSP_genetic.py' to set path for the base_directory that contains the input files.
      Line '141' for 'bnb.py'
-     Line x for 'TSP_genetic.py'
+     Line '17' for 'TSP_genetic.py'
 #########################################
   
 #to run the Branch & Bound
