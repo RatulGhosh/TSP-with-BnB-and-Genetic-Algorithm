@@ -55,7 +55,7 @@ def TSPRec(adj, curr_bound, curr_weight,
     # base case is when we have reached level N  
     # which means we have covered all the nodes once 
     time_now = time.time()
-    if time_now - start > 1050:
+    if time_now - start > 1:
         return
     if level == N: 
           
@@ -155,15 +155,15 @@ def TSP(adj):
 with open("output_bnb.csv", "a") as f:
     f.writelines("81688982, 40204942, 32329404\nBnB\nTSP\n")
 
-base_dir = "/data"
+base_dir = "./data"
 file_list = os.listdir(base_dir)
-def cmp(c):
-    return (int(c.split('-')[2])/1000)+(int(c.split('-')[3])/10000000)+(int(c.split('-')[4])/100)+(int(c.split('-')[5])/25)
+# def cmp(c):
+#     return (int(c.split('-')[2])/1000)+(int(c.split('-')[3])/10000000)+(int(c.split('-')[4])/100)+(int(c.split('-')[5])/25)
 
 
 file_list = sorted([x for x in file_list if x[-3:] == "txt"])
 
-file_list = sorted(file_list, key = cmp)
+# file_list = sorted(file_list, key = cmp)
 
 for file_name in file_list:
     with open(os.path.join(base_dir, file_name), "r") as f:
