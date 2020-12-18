@@ -256,7 +256,7 @@ for file_name in file_list:
                                                                                 eliteSize=20, mutationRate=0.1/len(temp), 
                                                                                 generations=5000)
     time_taken = time.time()-start_time
-
+    print("FileName : "+file_name+"   "+"Total Distance : "+str(round(min_distance, 2))+"   "+"Episodes : "+str(num_episodes)+"\n")
     with open("output_sls.csv", "a") as f:
         f.writelines(file_name+","+str(round(min_distance, 2))+","+str(num_episodes)+"\n")
 
