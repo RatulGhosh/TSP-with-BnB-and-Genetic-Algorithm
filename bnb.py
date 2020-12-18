@@ -48,7 +48,7 @@ def TSPRec(adj, curr_bound, curr_weight,
     global final_res 
   
     time_now = time.time()
-    if time_now - start > 960:
+    if time_now - start > 3:
         return
 
     if level == N: 
@@ -140,7 +140,6 @@ with open("output_bnb.csv", "a") as f:
 # Hard-coded path for the base directory. Please change as necessary.
 base_dir = "C:/Users/Aditya/Downloads/271_AI_Project-main/Data"
 file_list = os.listdir(base_dir)
-counter = 1
 sys.setrecursionlimit(1200)
 file_list = sorted([x for x in file_list if x[-3:] == "txt"])
 
@@ -148,8 +147,6 @@ file_list = sorted([x for x in file_list if x[-3:] == "txt"])
 for file_name in file_list:
     with open(os.path.join(base_dir, file_name), "r") as f:
         temp = f.readlines()
-    print(str(counter) + ") " + file_name)
-    counter = counter +1
     temp = [x[:-1].split() for x in temp[1:]]
     temp = [[float(y) for y in x] for x in temp]
     adj = temp
@@ -167,7 +164,7 @@ for file_name in file_list:
     start_time = time.time()
     TSP(adj)
     time_taken = time.time()-start_time
-
+    print("FileName : "+file_name+"   "+"Total Distance : "+str(round(final_res, 8))+"   Final Path :"+str(final_path)+"\n")
     with open("output_bnb.csv", "a") as f:
         f.writelines(file_name + ","+str(round(final_res, 8))+"\n")
 
