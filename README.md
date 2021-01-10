@@ -4,7 +4,7 @@
 ```python
 install python > 3.6
 git clone https://github.com/RatulGhosh/271_AI_Project.git
-cd 271_AI_Project
+cd TSP-with-BnB-and-Genetic-Algorithm
 pip install -r requirements.txt
 
 ############# IMPORTANT #################
