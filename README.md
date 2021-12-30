@@ -24,7 +24,7 @@ For live code demo use the below link:
 
 The diagrams below show the progressing of the Genetic Algorithm. 
 
-![Alt Text](https://raw.githubusercontent.com/RatulGhosh/ratulghosh.github.io/master/images/ezgif-6-4667bf959372.gif)
+![Alt Text](https://raw.githubusercontent.com/RatulGhosh/TSP-with-BnB-and-Genetic-Algorithm/main/ezgif-6-4667bf959372.gif)
 
 ![Alt Text](https://raw.githubusercontent.com/RatulGhosh/271_AI_Project/main/progress.png)
 
